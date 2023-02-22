@@ -96,7 +96,7 @@ class Processor:
 
             if len(links):
                 for link in links:
-                    if re.findall(r"\.(apng|avif|svg|webp|jpe?g|png|mng|gif|bmp|ico|tiff)", link["href"]):
+                    if re.findall(r"\.(apng|avif|svg|webp|jpe?g|png|mng|gif|bmp|ico|tiff)(\?|$)", link["href"]):
                         replaced_links += 1
                         img_filename = download_file(link["href"], html_dir)
 
